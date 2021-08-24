@@ -29,7 +29,7 @@
         <div class="details">
           <p class="hint">Pay custom amount</p>
           <p class="title">Paying custom amount</p>
-          <p class="amount">Rs. {{ this.customAmount }}</p>
+          <p class="amount">Rs. {{ this.customAmount | toCurrency }}</p>
         </div>
         <p class="edit-btn" v-if="customAmount > 0">Edit</p>
         <div class="radio" v-else>
@@ -101,6 +101,11 @@ import BottomSheet from "@/components/BottomSheet.vue";
 
 @Component({
   components: { BottomSheet },
+  filters: {
+    toCurrency: (amount: number) => {
+      return amount.toLocaleString();
+    },
+  },
 })
 export default class Home extends Vue {
   private showPaymentSelection = false;

@@ -35,9 +35,11 @@ export default class BottomSheet extends Vue {
   width: 100%;
   height: 100vh;
   z-index: 100;
-  max-width: 400px;
-  margin: auto;
-  right: 0;
+  @media screen and(min-width: 768px) {
+    max-width: 360px;
+    margin: auto;
+    right: 0;
+  }
   .bg {
     background-color: #00000096;
     top: 0;
