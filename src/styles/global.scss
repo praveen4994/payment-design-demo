@@ -1,0 +1,28 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  font-family: Inter;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.3s, opacity 0.1s;
+}
+.slide-up-enter,
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
